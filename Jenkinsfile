@@ -16,7 +16,6 @@ node ('built-in')
         {
             echo 'Deploying Angular app ............'
             dir("C:/nginx-1.24.0/html") {
-                bat "nginx -s stop"
                 dir
                 bat "del /S /Q ."
             }
