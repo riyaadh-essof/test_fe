@@ -15,7 +15,10 @@ node ('built-in')
         stage('deploy')
         {
             echo 'Deploying Angular app ............'
-            bat "move dist C:\nginx-1.24.0/html"
+            bat "move dist C:/nginx-1.24.0/html"
+            echo 'Restarting server ................'
+            bat "cd C:/nginx-1.24.0"
+            bat "nginx -s reload"
         }
 }
 
