@@ -13,7 +13,7 @@ node ('built-in')
         stage('deploy')
         {
             echo 'Deploying Angular app ............'
-            bat "move dist C:\nginx-1.24.0\html"
+            bat "move dist C:\nginx-1.24.0/html"
         }
 }
 
