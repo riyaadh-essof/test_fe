@@ -4,7 +4,7 @@ node ('built-in')
         {
             git 'https://github.com/riyaadh-essof/test_fe.git'
             echo "Installing NG ....................."
-            bat "npm install -g @angular/cli"
+            bat "npm install"
         }
 	stage('build') 
 	{
