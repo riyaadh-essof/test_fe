@@ -26,6 +26,7 @@ node ('built-in')
             dir("C:/nginx-1.24.0") {
                 bat 'dir'
                 bat "start nginx"
+            }
         }
 }
 
