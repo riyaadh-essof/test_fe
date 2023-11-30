@@ -8,7 +8,7 @@ node ('built-in')
 	{
 	    echo 'Building Angular app .................'
         bat "dir"
-        bat "ng build"
+        bat "npm run ng -- build "
 	}
         stage('deploy')
         {
