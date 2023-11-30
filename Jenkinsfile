@@ -17,8 +17,10 @@ node ('built-in')
             echo 'Deploying Angular app ............'
             bat "move dist C:/nginx-1.24.0/html"
             echo 'Restarting server ................'
-            bat "cd C:/nginx-1.24.0"
-            bat "nginx -s reload"
+            bat 'dir'
+            bat "cd C:"\"nginx-1.24.0"
+            bat "nginx -s stop"
+            bat "start nginx"
         }
 }
 
