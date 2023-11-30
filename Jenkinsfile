@@ -7,7 +7,7 @@ node ('built-in')
 	stage('test') 
 	{
 	    echo 'in test'
-        sh "dir"
+        bat "dir"
 	}
         stage('deploy')
         {
