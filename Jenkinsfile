@@ -15,14 +15,17 @@ node ('built-in')
         stage('deploy')
         {
             echo 'Deploying Angular app ............'
-            bat "cd C:/nginx-1.24.0/html"
-            bat "del /S /Q ."
-            bat "move C:/ProgramData/Jenkins/.jenkins/workspace/test_fe_master/dist C:/nginx-1.24.0/html"
-            bat "cd .."
-            bat 'dir'
+            dir("C:/nginx-1.24.0/html") {
+                bat "nginx -s stop"
+                dir
+                bat "del /S /Q ."
+            }
+            bat "move dist C:/nginx-1.24.0/html"
+            
             echo 'Restarting server ................'
-            bat "nginx -s stop"
-            bat "start nginx"
+            dir("C:/nginx-1.24.0") {
+                bat 'dir'
+                bat "start nginx"
         }
 }
 
