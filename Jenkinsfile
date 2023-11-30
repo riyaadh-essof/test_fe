@@ -4,14 +4,16 @@ node ('built-in')
         {
             git 'https://github.com/riyaadh-essof/test_fe.git'
         }
-	stage('test') 
+	stage('build') 
 	{
-	    echo 'in test'
+	    echo 'Building Angular app .................'
         bat "dir"
+        bat "ng build"
 	}
         stage('deploy')
         {
-            echo 'in deployment'
+            echo 'Deploying Angular app ............'
+            bat "move dist C:\nginx-1.24.0\html"
         }
 }
 
