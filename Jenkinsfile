@@ -16,10 +16,10 @@ node ('built-in')
         {
             echo 'Deploying Angular app ............'
             dir("C:/nginx-1.24.0/html") {
-                bat 'dir'
                 bat "del /S /Q ."
+                bat 'dir'
             }
-            bat "move dist C:/nginx-1.24.0/html"
+            bat "runas /user:Administrator move dist C:/nginx-1.24.0/html"
             
             echo 'Restarting server ................'
             dir("C:/nginx-1.24.0") {
