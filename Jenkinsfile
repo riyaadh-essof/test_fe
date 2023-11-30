@@ -10,7 +10,7 @@ node ('built-in')
 	{
 	    echo 'Building Angular app .................'
         bat "dir"
-        bat "npm run ng build "
+        bat "npm run build"
 	}
         stage('deploy')
         {
